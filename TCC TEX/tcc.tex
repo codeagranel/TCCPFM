@@ -1,0 +1,127 @@
+%% TRABALHO DE CONCLUSAO DE CURSO UGF - PIEDADE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt]{abnt-UTFPR} % estilo de documento abnTeX
+\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm]{abntcite} % estilo de bibliografia abnTeX
+\usepackage[brazil]{babel} % pacote portugues brasileiro
+\usepackage{setspace}
+\usepackage{amsmath,amsfonts,amssymb} % pacote matematico
+\usepackage{graphicx} % pacote grafico
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{varioref}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+\usepackage{xspace}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{subfigure}
+\usepackage{xtab}
+\usepackage{nomencl}
+\usepackage[portuguese,algoruled,longend,linesnumbered]{algorithm2e}
+
+\usepackage{makeidx}
+\makeindex
+
+
+% ---------- Preambulo ----------
+\instituicao{UGF - Universidade Gama Filho} % nome da instituicao
+
+\titulo{TÍTULO} % titulo do trabalho
+
+\autor{AUTOR 1} % nome do autor 1
+\autorU{AUTOR 2} % nome do autor 2
+
+\palavraschave{palavra chave} % palavras-chave do trabalho
+\keywords{palavra chave em inglês} % palavras-chave do trabalho em ingles
+
+\comentario{Trabalho de Conclus\~ao de curso apresentado como requisito obrigat\'orio para obten\c{c}\~ao do t\'itulo de Bacharel em Ci\^encia da Computa\c{c}\~ao da UGF - Universidade Gama Filho.}
+
+\orientador{Orientador} % nome do orientador do trabalho
+\coorientador[Co-orientadora:]{\hspace{1.2mm}{Coorientador se tiver, senão comente a linha}} % <- no caso de co-orientadora, usar esta sintaxe
+
+\local{Rio de Janeiro} %cidade
+\data{2013} %ano
+
+%-----------------------INÍCIO DO DOCUMENTO ----------------------
+\begin{document}
+
+%------------------------CAPA DO DOCUMENTO------------------------
+\capa 
+%--------------------FOLHA DE ROSTO DO DOCUMENTO------------------
+\folhaderosto
+% -----------------------TERMO DE APROVAÇÃO-----------------------
+
+\textoaprovacao{Trabalho de Conclus\~ao de curso apresentado como requisito obrigat\'orio para obten\c{c}\~ao do t\'itulo de Bacharel em Ci\^encia da Computa\c{c}\~ao da FAA - Faculdade Anglo Americano, pela seguinte banca examinadora:}
+
+\primeiroassina{Prof. Banca 1\\Faculdade Anglo Americano\\(Orientador)}
+
+\segundoassina{Prof. Banca 2\\Faculdade Anglo Americano}
+
+\terceiroassina{Prof. Banca 3\\Faculdade Anglo Americano}
+
+\localdia{Rio de Janeiro, 07 de fevereiro de 2013.}
+
+\termodeaprovacao
+
+%------------------------DEDICATÓRIA------------------------------
+\pretextualchapter{}
+
+\vspace{20cm}
+\hspace{.3\textwidth}
+\begin{minipage}{.6\textwidth}
+	\par Texto dedicatória. 
+\end{minipage}
+
+%-----------------------AGRADECIMENTOS----------------------------
+\pretextualchapter{Agradecimentos}
+\vspace{-1.0cm}
+\par Agradecimentos.
+
+%-----------------------EPÍGRAFE-----------------------------------
+\begin{epigrafe}
+Epígrafe do trabalho (opcional). 
+\end{epigrafe}
+
+%--------------------------RESUMO----------------------------------
+\begin{resumo}
+Resumo do trabalho....
+\end{resumo}
+
+%--------------------------ABSTRACT----------------------------------
+\begin{abstract}
+Resumo em inglês do trabalho...
+\end{abstract}
+
+\listadefiguras % geracao automatica da lista de figuras
+\listadetabelas % geracao automatica da lista de tabelas
+\listadesiglas % geracao automatica da lista de siglas
+%\listadesimbolos % geracao automatica da lista de simbolos
+
+% sumario
+\sumario % geracao automatica do sumario
+
+\pagenumbering{1}
+
+%---------- Primeiro Capitulo ----------
+\linespread{1.5} % espaçamento entre linhas
+\sloppy %hifenização
+
+\input{Cap1/introducao.tex}
+
+\input{Cap2/revisao_bib.tex}
+
+\input{Cap3/metodologia.tex}
+
+\input{Cap4/implementacao.tex}
+
+\input{Cap5/resultados.tex}
+
+\input{Cap6/conclusao.tex}
+
+%---------- Referencias ----------
+\flushleft
+
+\bibliography{tccNovo.bib} % geracao automatica das referencias a partir do arquivo reflatex.bib
+
+\end{document}
